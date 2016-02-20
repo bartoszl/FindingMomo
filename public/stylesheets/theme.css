@@ -1,8 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 body{
-    background-color: #2c3e50;
-    color: white;
+    background-color:#ecf0f1;
 }
 
 #header{
@@ -34,8 +33,10 @@ body{
 .headerbar{
 	font-family: "Nunito";
     background-color: #2c3e50;
-    height: 50px;
+    height: 70px;
     padding-left: 20px;
+    padding-top: 10px;
+    color: white;
 
 }
 
@@ -44,14 +45,39 @@ body{
     margin:0;
     float:left;
     background-color: #34495e;
-    width: 40%;
+    width: 30%;
     height: 100%;
+    display: inline-block;
+    color: white;
+    vertical-align: top;
 }
 
 .commSpace{
-    float: right;
     background-color: #ecf0f1;
     color: white;
-    width: 60%;
+    width: 40%;
     height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.chatItem p{
+    width: 66%;
+    padding: 10px 2%;
+    background-color: #c0392b;
+    display: inline-block;
+
+}
+
+.chatItem img{
+    width: 10%;
+    padding: 5%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.chatItem{
+    width: 100%;
+    padding: 0 5%;
 }
