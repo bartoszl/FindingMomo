@@ -2,6 +2,7 @@
 body{
     background-color:#ecf0f1;
     color: white;
+    padding: 0 20%;
 }
 *{
     font-family: "Open Sans";
@@ -12,42 +13,48 @@ body{
     background-color: #2c3e50;
     height: 70px;
     padding-left: 20px;
-    padding-top: 10px;
 
 }
 
 .descSpace{
+    float:left;
     background-color: #34495e;
-    width: 30%;
+    width: 40%;
+    vertical-align: top;
     height: 100%;
-    display: inline-block;
 }
 
 .commSpace{
+    float: right;
     background-color: #ecf0f1;
+    vertical-align: top;
     color: white;
-    width: 40%;
+    width: 60%;
     height: 100%;
-    display: inline-block;
 }
 
-
-.chatItem p{
-    width: 66%;
-    padding: 10px 2%;
+.right{
+  float: right;
+}
+.left{
+    float: left;
+}
+.chatMessage{
+    width: 70%;
+    margin: 10px;
+    padding: 10px 10%;
     background-color: #c0392b;
-    display: inline-block;
+    display: inline;
 
 }
 
-.chatItem img{
-    width: 10%;
+.chatDP{
+    width: 50px;
     padding: 5%;
     vertical-align: middle;
-    display: inline-block;
+    display: inline;
 }
 
 .chatItem{
     width: 100%;
-    padding: 0 5%;
 }
