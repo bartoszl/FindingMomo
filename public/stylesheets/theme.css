@@ -1,3 +1,19 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @EddieWilkie
+ Unwatch 6
+  Star 0
+  Fork 0 bartoszl/FindingMomo
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs
+Branch: develop Find file Copy pathFindingMomo/public/stylesheets/theme.css
+f71cd3f  an hour ago
+@jtax jtax Merged Jon
+1 contributor
+RawBlameHistory    95 lines (84 sloc)  1.48 KB
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 html, body{
     background-color:#ecf0f1;
@@ -12,10 +28,12 @@ html, body{
     background-color: #2c3e50;
     height: 7%;
     padding-left: 20px;
+    padding-top: 10px;
+    color: white;
+
 }
 
 .descSpace{
-    float:left;
     background-color: #34495e;
     width: 30%;
     height: 93%;
@@ -41,9 +59,7 @@ html, body{
 }
 
 .commSpace{
-    float: right;
     background-color: #ecf0f1;
-    vertical-align: top;
     color: white;
     width: 55%;
     height: 93%;
@@ -51,25 +67,20 @@ html, body{
     vertical-align: top;
 }
 
-.right{
-  float: right;
-}
-.left{
-    float: left;
-}
-.chatMessage{
-    width: 70%;
-    margin: 10px;
-    padding: 10px 10%;
+
+.chatItem p{
+    width: 66%;
+    padding: 10px 2%;
     background-color: #c0392b;
-    display: inline;
+    display: inline-block;
+
 }
 
-.chatDP{
-    width: 50px;
+.chatItem img{
+    width: 10%;
     padding: 5%;
     vertical-align: middle;
-    display: inline;
+    display: inline-block;
 }
 
 .chatItem{
@@ -82,7 +93,6 @@ html, body{
 }
 .textInput{
     height:10%;
-
     padding: 0 10%;
 }
 .textInput input[type=text]{
@@ -99,3 +109,5 @@ html, body{
     border: none;
     width: 30%;
 }
+Status API Training Shop Blog About Pricing
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
