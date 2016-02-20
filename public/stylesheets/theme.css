@@ -25,6 +25,21 @@ body{
     vertical-align: top;
 }
 
+.rightSpace{
+    background-color: #ecf0f1;
+    color: white;
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+.rightSpace table{
+    width: 90%;
+}
+.rightSpace td,.rightSpace th{
+    text-align: right;
+}
+
 .commSpace{
     background-color: #ecf0f1;
     color: white;
