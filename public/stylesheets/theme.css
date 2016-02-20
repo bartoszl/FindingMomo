@@ -1,14 +1,38 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 body{
     background-color: #2c3e50;
     color: white;
 }
-*{
-    font-family: "Open Sans";
-    margin:0;
+
+#header{
+	font-size: 2.1em;
+	display: inline	
+}
+
+#subHeader{
+	font-family: "Nunito";
+	font-size: 0.85em;
+}
+
+#descHeader{
+	margin-bottom: 0px;
+	margin-top: 10px;
+	margin-left: 40px;
+	font-size: 1em;
+	
+}
+
+#descBody{
+	text-align: justify;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-top: 5px;
+	font-size: 0.9em;
 }
 
 .headerbar{
+	font-family: "Nunito";
     background-color: #2c3e50;
     height: 50px;
     padding-left: 20px;
@@ -16,6 +40,8 @@ body{
 }
 
 .descSpace{
+	font-family: "Open Sans";
+    margin:0;
     float:left;
     background-color: #34495e;
     width: 40%;
