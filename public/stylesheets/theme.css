@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 body{
     background-color:#ecf0f1;
-    color: white;
 }
 *{
     font-family: "Open Sans";
@@ -13,6 +12,7 @@ body{
     height: 70px;
     padding-left: 20px;
     padding-top: 10px;
+    color: white;
 
 }
 
@@ -21,6 +21,8 @@ body{
     width: 30%;
     height: 100%;
     display: inline-block;
+    color: white;
+    vertical-align: top;
 }
 
 .commSpace{
@@ -29,6 +31,7 @@ body{
     width: 40%;
     height: 100%;
     display: inline-block;
+    vertical-align: top;
 }
 
 
