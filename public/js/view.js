@@ -6,6 +6,7 @@ function View (){
     var form = document.getElementById("inputForm");
     var chatItems = document.getElementById("chatItems");
     var resultTable = document.getElementById("result");
+	var resultModal = document.getElementById("myModalBody");
 
 
     this.setformCallback = function (callback) {
@@ -18,17 +19,19 @@ function View (){
     this.addPCMessage = function(message){
         //var newItem = doc
         //var chitem =  "<div class='chatItem><img src='img/pc.png'><p>"+message + "</p></div>";
-        var newItem = document.createElement("div");
-        newItem.setAttribute("class","chatItem");
-        var newItemImg = document.createElement("img");
-        newItemImg.setAttribute("src","img/pc.png");
-        newItem.appendChild(newItemImg);
-        var newItemMessage = document.createElement("p");
-        newItemMessage.innerHTML = message;
-        newItem.appendChild(newItemMessage);
-        chatItems.appendChild(newItem);
-        chatItems.scrollTop = chatItems.scrollHeight;
-    };
+			if(message!==-1){
+			var newItem = document.createElement("div");
+			newItem.setAttribute("class","chatItem");
+			var newItemImg = document.createElement("img");
+			newItemImg.setAttribute("src","img/pc.png");
+			newItem.appendChild(newItemImg);
+			var newItemMessage = document.createElement("p");
+			newItemMessage.innerHTML = message;
+			newItem.appendChild(newItemMessage);
+			chatItems.appendChild(newItem);
+			chatItems.scrollTop = chatItems.scrollHeight;
+			}
+	};
     this.addUserMessage = function(message){
         var newItem = document.createElement("div");
         newItem.setAttribute("class","chatItem");
@@ -60,8 +63,13 @@ function View (){
             val.innerHTML = ans;
             resultTable.appendChild(row);
         });
-
-
-    }
-
+		
+		while(resultModal.firstElementChild){
+			resultModal.removeChild(resultModal.firstElementChild);
+		};
+		
+			var newItem = document.createElement("p");
+			newItem.innerHTML = answer;
+			resultModal.appendChild(newItem);
+		}
 }
