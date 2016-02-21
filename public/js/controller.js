@@ -16,6 +16,7 @@ function Controller(){
         view.clearInput();
 		if(model.getQuestion()===-1){
 			$("#myModal").modal();
+            view.updateModal(model.getAnswers(),model.getDesc());
 		}
         view.addPCMessage(model.getQuestion());
         view.updateResults(model.getAnswers());

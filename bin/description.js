@@ -52,7 +52,7 @@ module.exports = {
     description:"Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.",
     href:"http://semantic-ui.com/"
   },
-  "Passport":  {
+  "passport":  {
     description:"Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. A comprehensive set of strategies support authentication using a username and password, Facebook, Twitter, and more.",
     href:"http://passportjs.org/"
   },
