@@ -21,7 +21,7 @@ function View () {
         //var chitem =  "<div class='chatItem><img src='img/pc.png'><p>"+message + "</p></div>";
         if (message !== -1) {
             var newItem = document.createElement("div");
-            newItem.setAttribute("class", "chatItem");
+            newItem.setAttribute("class", "chatItem animate");
             var newItemImg = document.createElement("img");
             newItemImg.setAttribute("src", "img/pc.png");
             newItem.appendChild(newItemImg);
