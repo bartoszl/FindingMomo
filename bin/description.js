@@ -28,7 +28,7 @@ module.exports = {
     description:"you can use Grunt to automate just about anything with a minimum of effort.",
     href: "http://gruntjs.com/"
   },
-  "Reactjs":  {
+  "React":  {
     description:"a javascript library for building user interfaces, built by facebook.",
     href: "https://facebook.github.io/react/"
   },
