@@ -14,6 +14,9 @@ function Controller(){
         view.addUserMessage(input);
         model.answerQuestion(input);
         view.clearInput();
+		if(model.getQuestion()===-1){
+			$("#myModal").modal();
+		}
         view.addPCMessage(model.getQuestion());
         view.updateResults(model.getAnswers());
     };

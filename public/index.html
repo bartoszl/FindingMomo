@@ -2,37 +2,59 @@
     <head>
         <title>InsomniStack</title>
         <link href="stylesheets/theme.css" rel="stylesheet">
+		<link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     </head>
     <body>
+	
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Your personal stack</h4>
+			    </div>
+			    <div class="modal-body">
+					<p>Blah<br>Blah<br>Blah<br>Blah<br>Blah<br></p>
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+	
         <div class="headerbar">
             <p id="header">InsomniStack</p>
             <i id="subHeader">"No more lost sleep on stacks"</i>
-
-        </div>
+		</div>
         <div class="descSpace">
             <hr>
             <h1 id="descHeader">Getting Started</h1>
-            <p id="descBody">Follow Somni's questions for advice on your web stack!
+            <p id="descBody">Follow Somni's questions for advice on your web stack!</p>
             <hr>
-        </div><!--
-    _--><div class="commSpace">
+        </div>
+    _	<div class="commSpace">
             <div class="chatItems" id="chatItems">
-            <!--<div class="chatItem"><img src="img/pc.png"><p>Hello....</p></div>
-            <div class="chatItem"><p>Its me</p><img src="img/person.png"></div>-->
             </div>
             <div class="textInput">
                 <form id="inputForm" onsubmit="return false">
-                <input type="text" name="input" id="input" value=""><input type="submit">
-                    </form>
+					<input type="text" name="input" id="input" value=""><input type="submit">
+				</form>
             </div>
-        </div><!--
-    _--><div class="rightSpace">
-        <table id="result">
-        </table>
-    </div>
+        </div>
+    _	<div class="rightSpace">
+			<table id="result">
+			</table>
+		</div>		
 
         <script src="js/model.js"></script>
         <script src="js/view.js"></script>
-        <script src="js/controller.js"></script>
+        <script src="js/controller.js"></script>		
+		<!-- Latest jQuery (1.11.1) -->
+		<script src="js/jquery-1.12.0.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		
     </body>
 </html>
