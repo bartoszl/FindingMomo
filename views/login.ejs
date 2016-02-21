@@ -1,12 +1,19 @@
 <!doctype html>
 <html>
+<head>
+  <link href="stylesheets/dialog.css" rel="stylesheet">
+</head>
 <body>
-  <p> LOGIN </p>
+  <div class="dialog">
+  <h1> Login </h1>
   <form action="/login" method="POST">
-    <input type="text" name="email">
-    <input type="passport" name="password">
-    <button type="submit">SUBMIT</button> 
+    <input type="text" name="email" placeholder="email"><br>
+    <input type="passport" name="password" placeholder="password"><br>
+    <button type="submit">Login</button><button type="submit">Register</button>
+
   </form>
+    </div>
+
 
 </body>
 </html>
