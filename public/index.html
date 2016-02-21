@@ -16,22 +16,18 @@
             <hr>
         </div><!--
     _--><div class="commSpace">
-            <div class="chatItems">
-            <div class="chatItem"><img src="img/pc.png"><p>Hello....</p></div>
-            <div class="chatItem"><p>Its me</p><img src="img/person.png"></div>
+            <div class="chatItems" id="chatItems">
+            <!--<div class="chatItem"><img src="img/pc.png"><p>Hello....</p></div>
+            <div class="chatItem"><p>Its me</p><img src="img/person.png"></div>-->
             </div>
             <div class="textInput">
-                <form id="inputForm">
-                <input type="text" name="input" value=""><input type="submit">
+                <form id="inputForm" onsubmit="return false">
+                <input type="text" name="input" id="input" value=""><input type="submit">
                     </form>
             </div>
         </div><!--
     _--><div class="rightSpace">
-        <table>
-            <tr><th>Databases</th></tr>
-            <tr><td>SQL</td></tr>
-            <tr><th>MVC</th></tr>
-            <tr><td>Angular</td></tr>
+        <table id="result">
         </table>
     </div>
 

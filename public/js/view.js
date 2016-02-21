@@ -5,6 +5,7 @@ function View (){
     var input = document.getElementById("input");
     var form = document.getElementById("inputForm");
     var chatItems = document.getElementById("chatItems");
+    var resultTable = document.getElementById("result");
 
 
     this.setformCallback = function (callback) {
@@ -44,5 +45,23 @@ function View (){
     this.getInput = function(){
       return input.value;
     };
+    this.clearInput = function (){
+        input.value = "";
+    }
+
+    this.updateResults = function (answer){
+        while(resultTable.firstElementChild){
+            resultTable.removeChild(resultTable.firstElementChild);
+        }
+        console.log(answer);
+        answer.map(function(ans){
+            var row = document.createElement("tr");
+            var val = row.appendChild(document.createElement("td"));
+            val.innerHTML = ans;
+            resultTable.appendChild(row);
+        });
+
+
+    }
 
 }

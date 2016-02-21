@@ -5,27 +5,17 @@ function Controller(){
         var model = new Model();
 
     this.init = function(){
-        view.addUserMessage("hello George");
-        view.addUserMessage("hello Eddie");
-        view.addPCMessage("hello George");
-        view.addUserMessage("hello Eddie");
-        view.addPCMessage("hello George");
-        view.addPCMessage("hello Eddie");
-        view.addPCMessage("hello George");
-        view.addUserMessage("hello Eddie");
-        view.addPCMessage("hello George");
-        view.addPCMessage("hello Eddie");
-        view.addUserMessage("hello George");
-        view.addPCMessage("hello Eddie");
         setFormListener();
-
-        console.log(model.getTree);
 
     };
 
     var getUserInput = function(){
         var input = view.getInput();
-        alert(input);
+        view.addUserMessage(input);
+        model.answerQuestion(input);
+        view.clearInput();
+        view.addPCMessage(model.getQuestion());
+        view.updateResults(model.getAnswers());
     };
     var  setFormListener = function(){
         view.setformCallback(getUserInput);
@@ -42,6 +32,8 @@ function Controller(){
                 if (xhr.status === OK) {
                     var jsonDoc = JSON.parse(xhr.responseText, "text/json");
                     model.setTree(jsonDoc);
+                    model.init();
+                    view.addPCMessage(model.getQuestion());
                 } else {
                     console.log('XHR Error: ' + xhr.status); // An error occurred during the request.
                 }
