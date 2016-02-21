@@ -73,10 +73,11 @@ html, body{
 
 .chatItems{
     height: 90%;
+    overflow: scroll;
 }
 .textInput{
-    height:10%;
-    padding: 0 10%;
+    height:8%;
+    padding: 1% 10%;
 }
 .textInput input[type=text]{
     -webkit-appearance: none;

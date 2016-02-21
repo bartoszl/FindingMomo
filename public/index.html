@@ -2,7 +2,6 @@
     <head>
         <title>Finding Momo</title>
         <link href="stylesheets/theme.css" rel="stylesheet">
-        <script src="app.js"></script>
     </head>
     <body>
         <div class="headerbar"><h1>InsomniStack</h1><p>No more lost sleep on stacks</p></div>
@@ -10,13 +9,13 @@
             Test
         </div><!--
     _--><div class="commSpace">
-            <div class="chatItems">
+            <div class="chatItems" id="chatItems">
             <div class="chatItem"><img src="img/pc.png"><p>Hello....</p></div>
             <div class="chatItem"><p>Its me</p><img src="img/person.png"></div>
             </div>
             <div class="textInput">
                 <form id="inputForm">
-                <input type="text" name="input" value=""><input type="submit">
+                <input type="text" name="input" id="input" value=""><input type="submit">
                     </form>
             </div>
         </div><!--
@@ -28,5 +27,9 @@
             <tr><td>Angular</td></tr>
         </table>
     </div>
+
+        <script src="js/model.js"></script>
+        <script src="js/view.js"></script>
+        <script src="js/controller.js"></script>
     </body>
 </html>
