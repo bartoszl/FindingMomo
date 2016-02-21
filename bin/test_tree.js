@@ -30,7 +30,7 @@ q2.addLeft(["MongoDB", "mongoose"]);
 questionSet.push(root);
 
 var root = new Question("Do you want a task runner?", "yes", "no");
-var q1 = new Question("Would you prefer to write it in javascript or as configuration file", "javascript", "configuration");
+var q1 = new Question("Would you prefer to write it in javascript or as configuration file?", "javascript", "configuration");
 root.addLeft(q1);
 root.addRight(["n/a"]);
 q1.addLeft(["Gulp"]);
@@ -60,7 +60,7 @@ q2.addRight(["Semantic UI"]);
 questionSet.push(root);
 
 var root = new Question("Do you want user authentication?", "yes", "no");
-root.addLeft(["passport.js"]);
+root.addLeft(["passport"]);
 root.addRight(["n/a"]);
 questionSet.push(root);
 
@@ -104,7 +104,7 @@ root.addLeft(["bluebird"]);
 root.addRight(["n/a"]);
 questionSet.push(root);
 
-var root = new Question("Do you want your server to be real time?", "yes", "no");
+var root = new Question("Do you want your app to have realtime features?", "yes", "no");
 root.addLeft(["socket.io"]);
 root.addRight(["n/a"]);
 questionSet.push(root);
