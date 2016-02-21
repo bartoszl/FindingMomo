@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var questionSet = require('../bin/test_tree.js');
 var passport = require('../config/passport');
+var descriptions = require('../bin/descritpions.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,6 +11,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/questions', function(req, res){
   res.json(questionSet);
+});
+
+router.get('/descriptions', function(req, res){
+  res.json(descirptions);
 });
 
 router.post('/signup', passport.authenticate('local-signup', {
