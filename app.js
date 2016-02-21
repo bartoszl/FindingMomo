@@ -9,7 +9,7 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 
 var configDB = require('./config/db.js');
-mongoose.connect(configDB.url);
+//mongoose.connect(configDB.url);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

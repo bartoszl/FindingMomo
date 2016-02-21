@@ -20,7 +20,7 @@ function Controller(){
     var  setFormListener = function(){
         view.setformCallback(getUserInput);
     };
-    var dataRetrieval = function () {
+    var dataRetrievalTree = function () {
         var url = "/questions";
         var xhr = new XMLHttpRequest();
         xhr.open('get', url);
@@ -43,11 +43,32 @@ function Controller(){
     };
 
     this.getRemoteData = function (){
-        if(localStorage.getItem("time") !== new Date().toISOString().split("T")[0]){
-            dataRetrieval();
-        }
+            dataRetrievalTree();
     };
 
+    var dataRetrievalDesc = function () {
+        var urlD = "/descriptions";
+        var xhrD = new XMLHttpRequest();
+        xhrD.open('get', urlD);
+        xhrD.onreadystatechange = function () {
+            var DONE = 4, OK = 200; // readyState 4 = the request is done; status 200 = successful return
+            if (xhrD.readyState === DONE) {
+                if (xhrD.status === OK) {
+                    var jsonDoc = JSON.parse(xhrD.responseText, "text/json");
+                    model.setDesc(jsonDoc);
+                    model.initDesc();
+                } else {
+                    console.log('XHR Error: ' + xhrD.status); // An error occurred during the request.
+                }
+            }
+        };
+        xhrD.send(null);
+    };
+
+    this.getRemoteData = function (){
+        dataRetrievalTree();
+        dataRetrievalDesc();
+    };
 
 }
 var ctrl = new Controller();

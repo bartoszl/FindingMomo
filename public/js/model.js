@@ -9,6 +9,7 @@ function Model() {
     var index;
     var currentNode;
     var answers = [];
+    var desc = [];
 
     this.getTree = function(){
         return qTree;
@@ -17,6 +18,14 @@ function Model() {
         qTree = tree;
     };
 
+    this.setDesc = function (description){
+        desc = description;
+        console.log(desc);
+    }
+
+    this.getDesc = function (){
+        return desc;
+    }
     this.answerQuestion = function(answer){
         if(answer === currentNode.la){
             currentNode = currentNode.left;
@@ -31,20 +40,9 @@ function Model() {
                 }
             });
             console.log(answers);
-            //console.log(currentNode);
             index++;
 
         currentNode = qTree[index];
-        if(currentNode!==undefined) {
-            if (typeof currentNode.question !== 'undefined') {
-                //console.log(currentNode.question+'('+currentNode.la+'/'+currentNode.ra+')');
-               // answers.push(currentNode);
-            }
-        }
-            else{
-            //console.log(currentNode.question+'('+currentNode.la+'/'+currentNode.ra+')');
-            //answers.push(currentNode);
-            }
         }
     };
 
@@ -60,5 +58,8 @@ function Model() {
         currentNode = qTree[index];
         //Send First Question
     };
+    this.initDesc = function(){
+
+    }
 
 }

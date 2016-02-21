@@ -15,7 +15,7 @@ router.get('/questions', function(req, res){
 });
 
 router.get('/descriptions', function(req, res){
-  res.json(descirptions);
+  res.json(descriptions);
 });
 
 router.post('/signup', passport.authenticate('local-signup', {
