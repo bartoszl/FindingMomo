@@ -1,37 +1,60 @@
 <html>
     <head>
         <title>InsomniStack</title>
+		
+		<link rel="stylesheet" href="stylesheets/bootstrap.css">
         <link href="stylesheets/theme.css" rel="stylesheet">
     </head>
     <body>
+	
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Your personal stack</h4>
+			    </div>
+			    <div id="myModalBody" class="modal-body">
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+	
         <div class="headerbar">
-            <p id="header">InsomniStack</p>
-            <i id="subHeader">"No more lost sleep on stacks"</i>
-            <span class="buttonTray"><img src="" </span>
-        </div>
+            <p class="header">InsomniStack</p>
+            <i class="subHeader">"No more lost sleep on stacks"</i>
+		</div>
         <div class="descSpace">
             <hr>
-            <h1 id="descHeader">Getting Started</h1>
-            <p id="descBody">Follow Somni's questions for advice on your web stack!
+            <h1 class="descHeader">Getting Started</h1>
+            <p class="descBody">Follow Somni's questions for advice on your web stack!</p>
             <hr>
-        </div><!--
-    _--><div class="commSpace">
+        </div>
+     	<div class="commSpace">
             <div class="chatItems" id="chatItems">
-              
             </div>
             <div class="textInput">
                 <form id="inputForm" onsubmit="return false">
-                <input type="text" name="input" id="input" value=""><input type="submit">
-                    </form>
+					<input type="text" name="input" id="input" value=""><input type="submit">
+				</form>
             </div>
-        </div><!--
-    _--><div class="rightSpace">
-        <table id="result">
-        </table>
-    </div>
+        </div>
+    	<div class="rightSpace">
+			<table id="result">
+			</table>
+		</div>		
 
         <script src="js/model.js"></script>
         <script src="js/view.js"></script>
-        <script src="js/controller.js"></script>
+        <script src="js/controller.js"></script>		
+		<!-- Latest jQuery (1.11.1) -->
+		<script src="js/jquery-1.12.0.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		
     </body>
 </html>

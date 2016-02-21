@@ -7,18 +7,18 @@ html, body{
 	margin: 0px;
 }
 
-#header{
+.header{
 	font-size: 2.1em;
 	display: inline;
 	margin-left: 10px;
 }
 
-#subHeader{
+.subHeader{
 	font-family: "Nunito";
 	font-size: 0.85em;
 }
 
-#descHeader{
+.descHeader{
 	margin-bottom: 0px;
 	margin-top: 10px;
 	margin-left: 40px;
@@ -26,7 +26,7 @@ html, body{
 	
 }
 
-#descBody{
+.descBody{
 	text-align: justify;
 	padding-left: 40px;
 	padding-right: 40px;
@@ -60,7 +60,7 @@ html, body{
     border-left: 1px solid #2c3e50;
     background-color: #ecf0f1;
     color: white;
-    width: 14.9%;
+    width: 14.7%;
     height: 93%;
     display: inline-block;
     vertical-align: top;
@@ -92,7 +92,6 @@ html, body{
 }
 
 .chatItem img{
-    width: 10%;
     padding: 5%;
     vertical-align: middle;
     display: inline-block;

@@ -50,6 +50,10 @@ function Model() {
         return answers;
     }
     this.getQuestion = function (){
+		console.log(currentNode);
+		if(typeof currentNode === 'undefined'){
+			return -1;
+		}
         return currentNode.question +" ( "+currentNode.la+" / "+currentNode.ra + " )";
     };
 
