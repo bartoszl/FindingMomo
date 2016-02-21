@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var questionSet = require('../bin/test_tree.js');
 var passport = require('../config/passport');
+var descriptions = require('../bin/description.js');
+var App = require('../models/apps.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,6 +12,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/questions', function(req, res){
   res.json(questionSet);
+});
+
+router.get('/descriptions', function(req, res){
+  res.json(descirptions);
 });
 
 router.post('/signup', passport.authenticate('local-signup', {
@@ -40,6 +46,18 @@ router.get('/profile', isLoggedIn, function(req, res) {
   });
 });
 
+router.post('/newapp', function(req, res){
+  var app = new App();
+  app.user = req.user._id;
+  app.modules = req.body.answers;
+  app.save();
+});
+
+router.get('/apps', function(req,res){
+  App.find({user: req.user._id}, function(apps){
+    res.json(apps);
+  });
+});
 
 module.exports = router;
 

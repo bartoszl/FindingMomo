@@ -19,7 +19,7 @@ function View (){
         //var newItem = doc
         //var chitem =  "<div class='chatItem><img src='img/pc.png'><p>"+message + "</p></div>";
         var newItem = document.createElement("div");
-        newItem.setAttribute("class","chatItem");
+        newItem.setAttribute("class","chatItem animate");
         var newItemImg = document.createElement("img");
         newItemImg.setAttribute("src","img/pc.png");
         newItem.appendChild(newItemImg);
@@ -29,6 +29,7 @@ function View (){
         chatItems.appendChild(newItem);
         chatItems.scrollTop = chatItems.scrollHeight;
     };
+    
     this.addUserMessage = function(message){
         var newItem = document.createElement("div");
         newItem.setAttribute("class","chatItem");
