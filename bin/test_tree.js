@@ -65,7 +65,7 @@ root.addRight(["n/a"]);
 questionSet.push(root);
 
 var root = new Question("Do you want sessions?", "yes", "no");
-root.addLeft(["express-sessions"]);
+root.addLeft(["express-session"]);
 root.addRight(["n/a"]);
 questionSet.push(root);
 
